@@ -1,0 +1,23 @@
+header{
+    text-align: center;
+}
+.contentTitle {
+    width: 40%;
+    margin: 0 auto;
+    height: 100%;
+    border: 1px solid;
+    background-color: steelblue;
+}
+
+.contents {
+    width: 40%;
+    margin: 0 auto;
+    height: 100%;
+    border: 1px solid;
+    border-top: 0;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+}
