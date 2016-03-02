@@ -29,10 +29,28 @@
 <div class="contentTitle">
     <div class='title'>
         Authentication
+         Provide  step-by-step instructions on how to obtain API keys. 
+
     </div>
 </div>
 <div class='contents'>
-    QWERTY
+    Authentication to use the LAN application is handled with HTTP Basic Authentication. User's logging in are searched by their unique username
+    and the provided password is hashed and matched with the registered password for that account. Upon successful authentication, a token is then sent
+    to the user and is passed along with each subsequent request. The token contains a secret key generated and verified by the server.
+     The token will remain valid until a user logs out or after 12 hours which is the token expiration.
+</div>
+<br>
+<div class="contentTitle">
+    <div class='title'>
+        API Keys
+    </div>
+</div>
+<div class='contents'>
+    Want to implement LAN's REST API into your own app? Doing so is easy, once you have registered for
+    a LAN account, you can click the "Developer?" link located at the footer of LAN's website. This will allow you to recieve
+    JSON formatted data of your messages and newsfeed. After your username and password have been 
+    verified, an API Key will be generarated for you. You will need to provide the key at the end of each of your requests to the LAN API.
+    Here is an example request to retrieve all of items from your newsfeed with an API Key appended to the end: http://lan/api/v1/newsfeed/API=ETYN4667CVCDF
 </div>
 <br>
 <div class="contentTitle">
