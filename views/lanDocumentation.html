@@ -31,13 +31,21 @@
 <div class="contentTitle">
     <div class='title'>
         Authentication
+<<<<<<< HEAD
+        Provide step-by-step instructions on how to obtain API keys.
+
+=======
+>>>>>>> refs/remotes/origin/master
     </div>
 </div>
 <div class='contents'>
-    Authentication to use the LAN application is handled with HTTP Basic Authentication. User's logging in are searched by their unique username
-    and the provided password is hashed and matched with the registered password for that account. Upon successful authentication, a token is then sent
-    to the user and is passed along with each subsequent request. The token contains a secret key generated and verified by the server.
-     The token will remain valid until a user logs out or after 12 hours which is the token expiration.
+    Authentication to use the LAN application is handled with HTTP Basic Authentication. User's logging in are searched
+    by their unique username
+    and the provided password is hashed and matched with the registered password for that account. Upon successful
+    authentication, a token is then sent
+    to the user and is passed along with each subsequent request. The token contains a secret key generated and verified
+    by the server.
+    The token will remain valid until a user logs out or after 12 hours which is the token expiration.
 </div>
 <br>
 <div class="contentTitle">
@@ -47,10 +55,13 @@
 </div>
 <div class='contents'>
     Want to implement LAN's REST API into your own app? Doing so is easy, once you have registered for
-    a LAN account, you can click the "Developer?" link located at the footer of LAN's website. This will allow you to recieve
-    JSON formatted data of your messages and newsfeed. After your username and password have been 
-    verified, an API Key will be generarated for you. You will need to provide the key at the end of each of your requests to the LAN API.
-    Here is an example request to retrieve all of items from your newsfeed with an API Key appended to the end: http://lan/api/v1/newsfeed/API=ETYN4667CVCDF
+    a LAN account, you can click the "Developer?" link located at the footer of LAN's website. This will allow you to
+    recieve
+    JSON formatted data of your messages and newsfeed. After your username and password have been
+    verified, an API Key will be generarated for you. You will need to provide the key at the end of each of your
+    requests to the LAN API.
+    Here is an example request to retrieve all of items from your newsfeed with an API Key appended to the end:
+    http://lan/api/v1/newsfeed/API=ETYN4667CVCDF
 </div>
 <br>
 <div class="contentTitle">
@@ -90,8 +101,52 @@
         Major Project Testable Requirements
     </div>
 </div>
-<div class='contents'>
-    QWERTY
+<div class='contents' style="position:relative; top:-16px">
+    <ul>
+        <li>
+            Functional user log in and registration forms: The user should be able to register by inputting a username,
+            password, email, zip code, and date of birth. Upon submission, the input will be pushed into our database,
+            thus allowing the user to login with their username and password.
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Functional implementation of geo-location: The user should be able to search our map tool using a zip code
+            input and view members who are located in that area.
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Functional friend system: The user should be able to search for friends based on their username, or
+            geo-location and submit a friend request. Friends list should be viewable on the users profile page.
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Functional messaging system that allows users to interact by messaging. The user should be able to compose
+            and send a message to another user. The recipient should have the ability to read messages in their inbox,
+            reply to them, or delete them.
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Functional user feed where messages will appear as they are posted by other users. User should have the
+            ability to post on their feed and have their message be seen by other users. The feed will be able to be
+            filtered depending on what the user is interested in seeing.
+        </li>
+    </ul>
+    <ul>
+        <li>
+           Both Website and Mobile app should allow for the similar, if not identical, functionality. Settings and
+            preferences from the website should carry over into mobile app companion of LAN.
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Profile pages should be able to be edited according to the preferences of the user. This may be either hide
+            a field from showing, or selecting a theme for their profile page.
+        </li>
+    </ul>
 </div>
 <br>
 <div class="contentTitle">
