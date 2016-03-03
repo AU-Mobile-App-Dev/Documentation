@@ -6,12 +6,22 @@ var errorCodes = [
     {code: 500, warning: "Internal Server Error", desc: "Something broke on our end, please contact the team if the problem persists."}
 ];
 
+var apiCalls = [
+    {name:"Username", type: "String", desc: "Only one username, case is ignored.", example: "sDavisJr1" },
+    {name: "City and State" , type:"String" , desc:"Full name of the city and the abbreviated name of state" , example:"Saint Charles, IL" },
+    {name: "Zip Code" , type: "Number", desc:"Five digit zip code for the city and state." , example:"You request would have 60174, if searching for users in Saint Charles, IL" },
+    {name:"Genre Type" , type:"String" , desc:"For some genres with abbreviated versions, you may need to use that instead. E.g. FPS instead of First person shooter." , example:"FPS, RPG, Strategy" }    
+];
+/**Controllers */
 angular.module('docApp', ['ngRoute'])
 
 .controller('errorController', function($scope){
     $scope.errorCodes = errorCodes;
 })
-
+.controller('apiController', function($scope){
+    $scope.apiCalls = apiCalls;
+} )
+/**Routes */
 .config(function($routeProvider){
     $routeProvider
     .when('/',{
@@ -21,5 +31,9 @@ angular.module('docApp', ['ngRoute'])
         .when('/errors',{
             templateUrl: 'errors.html',
             controller: 'errorController'
+        })
+        .when('/api',{
+            templateUrl: 'api.html',
+            controller: 'apiController'
         })
 })

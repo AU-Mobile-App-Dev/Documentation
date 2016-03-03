@@ -27,3 +27,17 @@ a{
     color: tomato;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.odd {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:grey;
+  color: white;
+}
+.even {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:black;
+}
+
+td, th{
+    text-align: center;
+    border:1px solid black;
+}
