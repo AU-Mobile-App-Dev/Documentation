@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='docApp'>
 <head>
     <meta charset="UTF-8">
     <title>LAN Documentation</title>
     <link href='../css/documentation.css' rel='stylesheet'>
 </head>
-<body>
+<body ng-view>
 <header>LAN Documentation</header>
 <br>
 <div class="contentTitle">
@@ -19,18 +19,23 @@
 <br>
 <div class="contentTitle">
     <div class='title'>
-        API Calls for CRUD
+        API Calls
     </div>
 </div>
 <div class='contents'>
-    QWERTY
+    Making requests to our API is quite simple, using our base URL https://www.lan-social.com/api/ and appending the resource
+    you wish to request. Currently our API only supports GET requests for Users, Messages, and Posts tied to your account's API key.
+    You will not be able to POST, DELETE, UPDATE, etc... Click <a href='#/api'>here</a> for examples of accessing the Users resource.
 </div>
 <br>
 <div class="contentTitle">
     <div class='title'>
         Authentication
+<<<<<<< HEAD
         Provide step-by-step instructions on how to obtain API keys.
 
+=======
+>>>>>>> refs/remotes/origin/master
     </div>
 </div>
 <div class='contents'>
@@ -65,7 +70,10 @@
     </div>
 </div>
 <div class='contents'>
-    QWERTY
+    When accessing our API, you may occasionaly run into errors. Our API will do its best to inform you of the nature of the problem so you may act accordingly.
+    The problems can range from problems on our server or something simple like a syntax error in your API request. All errors will be returned in JSON formatting 
+    with an appropriate error code and a short description of the nature of the problem. For a full listing of the error codes and their descriptions you can expect to
+    encounter please see them <a href='#/errors' >here.</a>
 </div>
 <br>
 <div class="contentTitle">
@@ -83,7 +91,9 @@
     </div>
 </div>
 <div class='contents'>
-    QWERTY
+    <a href="../images/usecase.png" target="_blank"><img src="../images/usecase.png" width="70%" style="float:left"></a>
+    <i>(Click image to enlarge.)</i> The use case for this project is for gamers to connect with other gamers. They begin by creating an account through the registration screen, which requires email, password, and ZIP code, and then logging in after they are successfully registered. The user will then be prompted to define their favorite games and favorite game genres. This will complete their profile and make it easier to match with other users based on this information. Now, the user can find local gamers by their location and see who they have common games with. They can also message other users and add them as friends. Adding a user as a friend allows for their game updates to display in the users news feed. Another option for the user is to update their game status. They will be able to select what game they are currently playing, write commentary about it, and post it to the common news feed. This update will only be viewable by people on their friends list.
+
 </div>
 <br>
 <div class="contentTitle">
@@ -156,5 +166,8 @@
 <div class='contents'>
     QWERTY
 </div>
+<script type="text/javascript" src="../lib/angular.min.js"></script>
+<script type="text/javascript" src="../lib/route.js"></script>
+<script type="text/javascript" src="../app.js"></script>
 </body>
 </html>
