@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='docApp'>
 <head>
     <meta charset="UTF-8">
     <title>LAN Documentation</title>
     <link href='../css/documentation.css' rel='stylesheet'>
 </head>
-<body>
+<body ng-view>
 <header>LAN Documentation</header>
 <br>
 <div class="contentTitle">
@@ -29,8 +29,6 @@
 <div class="contentTitle">
     <div class='title'>
         Authentication
-         Provide  step-by-step instructions on how to obtain API keys. 
-
     </div>
 </div>
 <div class='contents'>
@@ -59,7 +57,10 @@
     </div>
 </div>
 <div class='contents'>
-    QWERTY
+    When accessing our API, you may occasionaly run into errors. Our API will do its best to inform you of the nature of the problem so you may act accordingly.
+    The problems can range from problems on our server or something simple like a syntax error in your API request. All errors will be returned in JSON formatting 
+    with an appropriate error code and a short description of the nature of the problem. For a full listing of the error codes and their descriptions you can expect to
+    encounter please see them <a href='#/errors' >here.</a>
 </div>
 <br>
 <div class="contentTitle">
@@ -106,5 +107,8 @@
 <div class='contents'>
     QWERTY
 </div>
+<script type="text/javascript" src="../lib/angular.min.js"></script>
+<script type="text/javascript" src="../lib/route.js"></script>
+<script type="text/javascript" src="../app.js"></script>
 </body>
 </html>
