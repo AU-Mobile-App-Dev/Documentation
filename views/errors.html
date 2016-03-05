@@ -1,12 +1,8 @@
-<header>Error Codes</header>
-<div ng-repeat='error in errorCodes'>
-<br>
-<div class="contentTitle">
-    <div class='title'>
-       {{error.code}}: {{error.warning}}
-    </div>
-</div>
-<div class='contents'>
-  {{error.desc}}
-</div>
-</div>
+<header><h1>Errors</h1></header>
+
+<table>
+    <th>Error Code</th><th>Name</th><th>Description</th>
+<tr ng-repeat='error in errorCodes' ng-class-odd="'odd'" ng-class-even="'even'">
+<td>{{error.code}}</td><td>{{error.warning}}</td><td>{{error.desc}}</td>
+</tr>
+</table>
