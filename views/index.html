@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='docApp'>
+<head>
+    <meta charset="UTF-8">
+    <title>LAN Documentation</title>
+    <link href='../css/documentation.css' rel='stylesheet'>
+    <link href='../css/font-awesome/css/font-awesome.min.css' rel='stylesheet'>
+</head>
+<body ng-view class='container background'>
+  
+  <div class='navbar'>
+    <a class='punch' href="#/construction">Home</a>
+    <a class='punch' href="#/construction">About LAN</a>
+    <a class='active-punch' href="#/" active>API Docs</a>
+    <a class='punch' href='#/construction'>Get an API Key</a>
+  </div>
+  <header><h1>LAN Documentation</h1></header>
+
+ <div class='button-container'>
+  <button class='docButton lime' ng-click="showModal(0)"><i class="fa fa-reply-all fa-2x"></i> <small class='button-text'>Making Requests</small></button>
+  
+  <button class='docButton redgay' ng-click="showModal(1)"><i class="fa fa-lock fa-2x"></i><small class='button-text'> Authentication</small></button>
+  
+  <button class='docButton bluefish' ng-click="showModal(2)"><i class="fa fa-key fa-2x"></i><small class='button-text'> API Keys</small></button>
+  </div>
+  <div class='button-container'>
+  <button class='docButton yellow' ng-click="showModal(3)"><i class="fa fa-exclamation fa-2x"></i><small class='button-text'> Error Handling</small></button>
+  <button class='docButton magenta' ng-click="showModal(4)"><i class="fa fa-hand-spock-o fa-2x"></i><small class='button-text'> Use Case</small></button>
+  <button class='docButton lime' ng-click="showModal(5)"><i class="fa fa-gamepad fa-2x"></i><small class='button-text'>Testable Requirements</small></button>
+  
+  
+ 
+  </div>
+<div ng-hide="modalOff" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span  ng-click="showModal()" class="close">×</span>
+    <div ng-bind-html='content | to_trusted'></div>
+  </div>
+
+</div>
+</div>
+  <footer></footer>
+<script type="text/javascript" src="../lib/angular.min.js"></script>
+<script type="text/javascript" src="../lib/route.js"></script>
+<script type="text/javascript" src="../app.js"></script>
+</body>
+</html>
