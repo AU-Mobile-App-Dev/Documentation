@@ -7,3 +7,11 @@
 </tr>
 </table>
 </div>
+<header><h1>Making a Request Using AngularJS</h1></header>
+
+<table>
+    <th>Request Description</th><th>Example Angular Request</th><th>Example Response</th>
+<tr ng-repeat='request in requestDoc' ng-class-odd="'odd'" ng-class-even="'even'">
+<td>{{request.desc}}</td><td>{{request.code}}</td><td>{{request.example}}</td>
+</tr>
+</table>
